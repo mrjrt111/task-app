@@ -1,0 +1,12 @@
+<div *ngIf="tasks.length === 0; else showItems">
+  There are no tasks to display.
+</div>
+
+<ng-template #showItems>
+  <ul class="task-list">
+      <task-list-item
+          *ngFor="let task of tasks"
+          [task]="task"
+      ></task-list-item>
+  </ul>
+</ng-template>

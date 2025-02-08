@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Angular Training",
+      "description": "Create to-do Angular Program",
+      "dueDate": "2025-01-30T00:00:00.000Z",
+      "isComplete": true
+    },
+    {
+      "id": 2,
+      "name": "Bake Bread 2",
+      "description": "Make sourdough country bread and pan de cristal and baguettes",
+      "dueDate": "2025-01-31T00:00:00.000Z",
+      "isComplete": false
+    },
+    {
+      "name": "Fix Edit Task",
+      "description": "Do it. ",
+      "dueDate": "2025-01-30T00:00:00.000Z",
+      "isComplete": false,
+      "id": 3
+    }
+  ]
+}

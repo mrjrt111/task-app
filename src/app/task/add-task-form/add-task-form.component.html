@@ -1,0 +1,70 @@
+<div class="container">
+<form
+  class="row mt-3 gx-3 gy-2 align-items-center justify-content-left"
+  [formGroup]="taskForm"
+  (ngSubmit)="$event.preventDefault(); addNewTask()">
+  <div class="col-sm-6">
+      <label for="specificSizeInputName"><h4>Add Task</h4></label>
+      <br>
+      <label>Task Name</label>
+      <input type="text" class="form-control" formControlName="nameFormControl">
+
+      <div *ngIf="taskForm.get('nameFormControl')?.invalid && (taskForm.get('nameFormControl')?.dirty || taskForm.get('nameFormControl')?.touched)">
+        <small
+            class="text-danger"
+            *ngIf="taskForm.get('nameFormControl')?.hasError('required')">
+            Name is required.
+        </small>
+
+        <small
+            class="text-danger"
+            *ngIf="taskForm.get('nameFormControl')?.hasError('maxlength')">
+            Name cannot be more than 32 characters.</small>
+      </div>
+
+
+      <label>Description</label>
+      <textarea name="new-task-description-text" class="form-control" rows="4" cols="50" formControlName="descriptionFormControl"> </textarea>
+
+      <div *ngIf="taskForm.get('descriptionFormControl')?.invalid && (taskForm.get('descriptionFormControl')?.dirty || taskForm.get('descriptionFormControl')?.touched)">
+        <small
+            class="text-danger"
+            *ngIf="taskForm.get('descriptionFormControl')?.hasError('required')">
+            Description is required.
+        </small>
+
+        <small
+            class="text-danger"
+            *ngIf="taskForm.get('descriptionFormControl')?.hasError('maxlength')">
+            Name cannot be more than 255 characters.</small>
+      </div>
+
+        <label>Due Date</label>
+      <input type="date" name="new-task-due-date-text" class="form-control" formControlName="dueDateFormControl">
+
+      <div *ngIf="taskForm.get('dueDateFormControl')?.invalid && (taskForm.get('dueDateFormControl')?.dirty || taskForm.get('dueDateFormControl')?.touched)">
+        <small
+            class="text-danger"
+            *ngIf="taskForm.get('dueDateFormControl')?.hasError('required')">
+            Due Date is required.
+        </small>
+
+        <small
+            class="text-danger"
+            *ngIf="taskForm.get('dueDateFormControl')?.hasError('invalidDueDate')">
+            Please choose a date that is not less than today</small>
+      </div>
+
+
+
+  </div>
+  <div>
+      <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="taskForm.invalid"
+      >Add Task</button>
+  </div>
+</form>
+
+</div>

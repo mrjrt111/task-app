@@ -3,16 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TaskModule } from "./task/task.module";
+import { NotfoundComponent } from './shared/notfound/notfound.component';
+import { UserConfigInterface } from './shared/routes/userConfigInterface';
+import { DeactivateGuard } from './services/DeactivateGuardService';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TaskModule
+],
+  providers: [DeactivateGuard
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

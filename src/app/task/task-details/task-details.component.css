@@ -1,0 +1,35 @@
+h3 {
+  display: inline;
+  }
+
+  .btn {
+    border:1px solid rgb(178, 178, 178);
+    color: rgb(48, 47, 47);
+    cursor: pointer; /* Mouse pointer on hover */
+    margin-right: 10px;
+
+  }
+
+  #editButton{
+    margin-left: 20px;
+  }
+
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: rgb(35, 35, 35);
+    color: rgb(255, 255, 255);
+  }
+
+  .strikeout {
+    text-decoration: line-through;
+  }
+
+  .checkbox{
+    transform: scale(2);
+    margin-right: 10px;
+  }
+
+
+
+
+

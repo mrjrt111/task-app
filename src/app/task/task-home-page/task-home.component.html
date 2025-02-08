@@ -1,0 +1,19 @@
+
+
+  <body>
+  <div class="container">
+  <div class="row mt-3" id="filter-section">
+    <task-filter
+      [(filter)]="filter"
+    ></task-filter>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-mt-4">
+      <task-list
+        [tasks]="tasks.filter(filter)"
+      ></task-list>
+    </div>
+  </div>
+</div>
+  </body>

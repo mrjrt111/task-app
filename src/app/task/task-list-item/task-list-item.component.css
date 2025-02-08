@@ -1,0 +1,58 @@
+.strikeout {
+  text-decoration: line-through;
+}
+
+.task-data {
+  padding-right: 500;
+}
+
+.checkbox{
+  transform: scale(2);
+}
+
+.form-check{
+  padding-right: 50px;
+}
+
+#task-item-data{
+  width: 100%;
+}
+
+
+.taskItemDiv{
+  border-style: solid;
+border-width: thin;
+border-color: #4e4e4e;
+}
+
+
+.btn {
+  border:1px solid rgb(178, 178, 178);
+  color: rgb(48, 47, 47);
+  padding: 10px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgb(35, 35, 35);
+  color: rgb(255, 255, 255);
+}
+
+.divider{
+  width:auto;
+  height: 5px;;
+}
+
+.divItem{
+  border:1px solid rgb(209, 209, 209);
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
